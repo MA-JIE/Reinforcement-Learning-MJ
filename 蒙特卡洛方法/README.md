@@ -9,6 +9,9 @@
 假设策略pi下途径状态s的多幕数据，我们想要估计策略pi下状态s的价值函数。<br>
 * 首次访问型ＭＣ算法:<br>
 用s的所有首次访问的回报的平均值估计价值函数。<br>
+![first_visit](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%96%B9%E6%B3%95/img/first_visit.png) <br>
+![mc_prediction](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%96%B9%E6%B3%95/img/mc_prediction.png)  <br>
+![mc_prediction2](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%96%B9%E6%B3%95/img/mc_prediction2.png) <br>
 ``` python
 pi = init_pi()
 returns = defaultdict(list)

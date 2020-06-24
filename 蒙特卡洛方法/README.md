@@ -12,7 +12,7 @@
 ![first_visit](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%96%B9%E6%B3%95/img/first_visit.png) <br>
 假设下图为一个分幕式的动作:<br>
 ![mc_prediction](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%96%B9%E6%B3%95/img/mc_prediction.png)  <br>
-第一幕中，状态s第一出现时的累计回报Ｇ11 = +2, 第二次出现时的Ｇ12 = 0+1-3+5　= +3
+第一幕中，状态s第一出现时的累计回报Ｇ11 = +2, 第二次出现时的Ｇ12 = 0+1-3+5　= +3 <br>
 ![mc_prediction2](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%96%B9%E6%B3%95/img/mc_prediction2.png) <br>
 假设状态s统计的次数为Ｎ(S)，那么状态s的价值函数为:<br>
 ｖ(s) = (G11 + G21 + ....) / N(S) <br>

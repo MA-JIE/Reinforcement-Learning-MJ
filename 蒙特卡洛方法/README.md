@@ -8,10 +8,14 @@
 # 蒙特卡洛预测
 假设策略pi下途径状态s的多幕数据，我们想要估计策略pi下状态s的价值函数。<br>
 * 首次访问型ＭＣ算法:<br>
-用s的所有首次访问的回报的平均值估计价值函数。<br>
+用s的所有首次访问的回报的平均值估计价值函数。伪代码如下图所示:<br>
 ![first_visit](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%96%B9%E6%B3%95/img/first_visit.png) <br>
+假设下图为一个分幕式的动作:<br>
 ![mc_prediction](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%96%B9%E6%B3%95/img/mc_prediction.png)  <br>
+第一幕中，状态s第一出现时的累计回报Ｇ11 = +2, 第二次出现时的Ｇ12 = 0+1-3+5　= +3
 ![mc_prediction2](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%96%B9%E6%B3%95/img/mc_prediction2.png) <br>
+假设状态s统计的次数为Ｎ(S)，那么状态s的价值函数为:<br>
+ｖ(s) = (G11 + G21 + ....) / N(S) <br>
 ``` python
 pi = init_pi()
 returns = defaultdict(list)
@@ -31,4 +35,6 @@ V = { state : np.mean(ret) for state, ret in returns.items() }
 ```
 * 每次访问型ＭＣ算法:<br>
 使用所有访问的回报的平均值估计价值函数。<br>
+假设状态s出现的所有的次数为Ｎ(S)，那么状态s的价值函数为:<br>
+ｖ(s) = (G11 + G12 + G21 + G22 + ....) / N(S) <br>
 

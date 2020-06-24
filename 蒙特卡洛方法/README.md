@@ -59,4 +59,5 @@ V = { state : np.mean(ret) for state, ret in returns.items() }
 伪代码如下:<br>
 ![mc_es](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%96%B9%E6%B3%95/img/mc_es.png)<br>
 
-    
+# 无试探性出发的蒙特卡洛控制
+为了避免在真实环境中很难被满足的试探性出发假设，

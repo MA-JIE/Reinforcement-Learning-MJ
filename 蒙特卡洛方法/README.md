@@ -46,4 +46,8 @@ V = { state : np.mean(ret) for state, ret in returns.items() }
 * 试探性假设:<br>
 一种方法是将指定的“状态－动作”组作为起点开始一幕采样，同时保证所有的“状态－动作”二元组都有非另的概率可以被选为起点。这样经过一定次数的幕，我们可以得出每个二元组的回报均值了。<br>
 # 蒙特卡洛控制
-
+通过上述基于试探性假设的动作价值的蒙特卡洛估计，我们可以求解出初始策略pi下的状态-动作值函数，然后我们就可以进行策略迭代了。<br>
+![mc_control](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%96%B9%E6%B3%95/img/mc_control.png)<br>
+策略评估==>策略改进,经过多次迭代后，近似的动作价值函数会逐渐地趋向真实的动作价值函数。<br>
+策略改进的方法还是在当前的价值函数上贪心地选择动作:<br>
+![mc_tanxin](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%96%B9%E6%B3%95/img/tanxin.png)<br>

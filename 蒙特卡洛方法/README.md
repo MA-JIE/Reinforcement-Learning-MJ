@@ -60,4 +60,15 @@ V = { state : np.mean(ret) for state, ret in returns.items() }
 ![mc_es](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%96%B9%E6%B3%95/img/mc_es.png)<br>
 
 # 无试探性出发的蒙特卡洛控制
-为了避免在真实环境中很难被满足的试探性出发假设，
+为了避免在真实环境中很难被满足的试探性出发假设，唯一的一般性解决方案就是智能体能够持续不断地选择所有可能的动作，有两种方法可以保证这一点，分别成为:<br>
+* 同轨策略(on policy):ϵ-Greedy策略<br>
+用于生成采样数据序列的策略和用于实际决策的待评估和改进的策略是相同的，即评估、优化现在正在做决策的那个策略。<br>
+ϵ-Greedy策略:<br>
+因为我们要“不再贪婪”，最简单的方法就是用ε-greedy：对于任何时刻t的执行“探索”小概率 ，我们会有ϵ < 1的概率会随机选择一个动作，相比贪婪策略，ϵ-Greedy随机选择策略（不贪婪）的概率是 ϵ / |A(s)|, 选中贪心动作的概率为 1 - ϵ - ϵ / |A(s)|。<br>
+伪代码如下:<br>
+![on_policy](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%96%B9%E6%B3%95/img/on_policy.png)<br>
+* 离轨策略(off policy)<br>
+用于生成采样数据序列的策略和用于实际决策的待评估和改进的策略是不相同的，即改进的则是和现在正在做决策的那个策略不同的策略。<br>
+
+
+

@@ -83,3 +83,9 @@ Off-policy策略通常涉及多个agent，其中一个agent一直在生成另一
 * 一般重要性采样
 * 加权重要性采样
 # 增量式实现
+蒙特卡洛预测方法也可以采用增量式的实现方式，假设我们使用上节中的加权重要性采样，我们有一个回报序列G1,G2,....,Gn-1,他们都从相同的状态开始，且每一个回报都对应一个随机权重Wi,那么我们可以得到如下形式的一些抽样算法：<br>
+![增量式实现](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%96%B9%E6%B3%95/img/incremental.png)<br>
+我们为了能不断跟踪Vn的变化，必须为每一个状态维护前n个回报对应的权值的累加和Ｃn.Vn的更新方法为:<br>
+![增量式实现](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%96%B9%E6%B3%95/img/incremental1.png)<br>
+# 离轨策略的蒙特卡洛控制
+![增量式实现](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%96%B9%E6%B3%95/img/incremental２.png)<br>

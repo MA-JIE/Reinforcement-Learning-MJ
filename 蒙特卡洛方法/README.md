@@ -82,3 +82,4 @@ Off-policy策略通常涉及多个agent，其中一个agent一直在生成另一
 ![采样比](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%96%B9%E6%B3%95/img/caiyangbi.png)<br>
 * 一般重要性采样
 * 加权重要性采样
+# 增量式实现

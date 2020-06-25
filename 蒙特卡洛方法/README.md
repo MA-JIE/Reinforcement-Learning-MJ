@@ -70,5 +70,15 @@ V = { state : np.mean(ret) for state, ret in returns.items() }
 * 离轨策略(off policy)<br>
 用于生成采样数据序列的策略和用于实际决策的待评估和改进的策略是不相同的，即改进的则是和现在正在做决策的那个策略不同的策略。<br>
 
-
-
+# 基于重要度采样的离轨策略
+* pi 目标策略: 我们希望能优化这些策略已获得最高回报,即用来学习的策略.<br>
+* b  动作策略: 我们正在用b生成π之后会用到的各种数据，即用于生成行动样本的策略. <br>
+Off-policy策略通常涉及多个agent，其中一个agent一直在生成另一个agent试图优化的数据，我们分别称它们为动作策略和目标策略。就像神经网络比线性模型更“有趣”，同样的，Off-policy策略一般也比On-Policy策略更好玩，也更强大。当然，它也更容易出现高方差，更难收敛。<br>
+重要性采样则是统计学中估计某一分布性质时使用的一种方法。它在这里充当的角色是回答“给定 Eb[G]，Epi[G]是什么”？换句话说，就是我们如何使用从 b 抽样得到的信息来确定 pi 的预期回报？<br>
+直观来看，如果 b 选了很多 a， pi 也选了很多 a ，那 b 在 pi 中应该发挥着重要作用；相反地，如果 b 选了很多 a， pi 并不总是跟着 b 选 a，那 b 因 a 产生的状态不会对 pi 因 a 产生的状态产生过大影响。<br>
+重要度采样比:对回报值根据其轨迹在目标策略与行动策略中出现的相对概率进行加权．<br>
+给定起始状态Ｓt,后续的状态－动作轨迹Ａt,St+1,At+1,,,,,,ST在策略pi下发生的概率为:<br>
+![采样比](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%96%B9%E6%B3%95/img/sampling.png)<br>
+![采样比](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%96%B9%E6%B3%95/img/caiyangbi.png)<br>
+* 一般重要性采样
+* 加权重要性采样

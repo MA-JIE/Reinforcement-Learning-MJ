@@ -6,3 +6,4 @@
 每当非终止状态St出现一次转移后,就进行上面的一次更新. 如果St+1是终止状态,那么Q(St+1,At+1)则定义为0.此更新规则用到了描述这个事件的五元组(St,At,Rt+1,St+1,At+1)中的所有元素.我们根据这五个元组把这个算法命名为:Sarsa <br>
 * 对给定的策略 pi, 持续的估计其动作价值函数q_{pi},同时以q_{pi}为基础,朝着贪心优化的方向改变pi. 伪代码如下所示: <br>
 ![Sarsa](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E6%97%B6%E5%BA%8F%E5%B7%AE%E5%88%86%E5%AD%A6%E4%B9%A0/Sarsa/img/Sarsa3.png) <br>
+* Sarsa算法的收敛性取决于策略对Q的依赖程度. 例如:我们可以采用ε-greedy或者ε-soft策略.只要所有的"状态-动作"二元组都被无限多次地访问到,并且贪心策略在极限情况下能够收敛(收敛过程可以通过令 ε = 1/t 来实现), Sarsa就能以1的概率收敛到最优的策略和动作价值函数.<br>

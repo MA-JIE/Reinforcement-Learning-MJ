@@ -39,5 +39,15 @@ Gt=Rt+1 + γRt+2 +γ^2 V(St+2) <br>
 给出这样的定义，有点像之前的γ参数一样，是用来控制权重的.而这里的λ的形式就是这样，它的权重就是下图所示: <br>
 ![n-step-TD](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E6%97%B6%E5%BA%8F%E5%B7%AE%E5%88%86%E5%AD%A6%E4%B9%A0/img/n_step_td3.png) <br>
 经过这个$(1−λ)λ^{n−1}$的作用，各个步数的权重就像上图这样衰减.相当于离状态s越远的，权重就越小。这也符合我们一般的想法，离得远的作用就小. <br>
+# 前向TD(λ)
+引入λ之后，会发现要更新一个状态的价值，必须要有一个完整的episode(看前面的公式)。这和MC算法的要求一样。所以前向TD(λ)在实际应用中也很少. <br>
+![前向TD](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E6%97%B6%E5%BA%8F%E5%B7%AE%E5%88%86%E5%AD%A6%E4%B9%A0/img/forward_td.png) <br>
+前向视角的解释：假设一个人坐在状态流上拿着望远镜看向前方，前方是那些将来的状态. 当估计当前状态的值函数时，从TD(λ)的定义中可以看到，它需要用到将来时刻的值函数. <br>
+![前向TD](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E6%97%B6%E5%BA%8F%E5%B7%AE%E5%88%86%E5%AD%A6%E4%B9%A0/img/forward_td1.png) <br>
 
-
+# 后向TD(λ)
+![后向TD](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E6%97%B6%E5%BA%8F%E5%B7%AE%E5%88%86%E5%AD%A6%E4%B9%A0/img/behind_td.png) <br>
+TD(λ)的后向视角解释：有个人坐在状态流上，手里拿着话筒，面朝着已经经历过的状态，获得当前回报并利用下一个状态的值函数得到TD偏差之后，此人会想已经经历过的状态喊话告诉这些已经经历过的状态处的值函数需要利用当前时刻的TD偏差进行更新. 此时过往的每个状态值函数更新的大小应该跟距离当前状态的步数有关. 假设当前状态为st，TD偏差为δt，那么St−1处的值函数更新应该乘以一个衰减因子γλ，状态St−2处的值函数更新应该乘以(γλ)^2，以此类推. <br>
+![后向TD](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E6%97%B6%E5%BA%8F%E5%B7%AE%E5%88%86%E5%AD%A6%E4%B9%A0/img/behind_td1.png) <br>
+对状态空间中的每一个状态s，更新价值函数. <br>
+(注意这里是对已经经历过的所有状态都更新v值) <br>

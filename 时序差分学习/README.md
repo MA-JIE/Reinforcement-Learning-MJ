@@ -51,3 +51,4 @@ TD(λ)的后向视角解释：有个人坐在状态流上，手里拿着话筒�
 ![后向TD](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E6%97%B6%E5%BA%8F%E5%B7%AE%E5%88%86%E5%AD%A6%E4%B9%A0/img/behind_td1.png) <br>
 对状态空间中的每一个状态s，更新价值函数. <br>
 (注意这里是对已经经历过的所有状态都更新v值) <br>
+参考自: https://blog.csdn.net/liweibin1994/article/details/79111536 <br>

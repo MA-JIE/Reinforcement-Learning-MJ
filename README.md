@@ -1,3 +1,3 @@
 # Reinforcement Learning
-## OPEN-AI
+## OpenAI
 https://spinningup.openai.com/en/latest/index.html <br>

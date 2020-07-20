@@ -3,3 +3,4 @@
 相关paper: "Human-Like Decision Making for Autonomous Driving: A Noncooperative Game Theoretic Approach" <br>
 网上关于MPC的详细介绍: <br>
 https://zhuanlan.zhihu.com/p/99409532 <br>
+https://zhuanlan.zhihu.com/p/148294640 <br>

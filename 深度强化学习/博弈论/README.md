@@ -28,4 +28,5 @@ GOO公司和SAM公司是某手机产品生态的两大重量级参与者,双方�
 # Stackelberg Game
 Stackelberg Game，即斯塔克伯格博弈，是一个两阶段的完全信息动态博弈，博弈的time是序贯的.<br>
 主要思想是双方都是根据对方可能的策略来选择自己的策略以保证自己在对方策略下的利益最大化，从而达到纳什均衡.在该博弈模型中，先作出决策的一方被称为leader，在leader之后，剩余的players根据leader的决策进行决策，被称为followers，然后leader再根据followers的决策对自己的决策进行调整，如此往复，直到达到纳什均衡. <br>
-
+细节以及公式描述: <br>
+https://en.wikipedia.org/wiki/Stackelberg_competition <br>

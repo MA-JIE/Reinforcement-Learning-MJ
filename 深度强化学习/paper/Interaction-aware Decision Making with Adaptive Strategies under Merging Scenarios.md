@@ -11,5 +11,6 @@ an interaction-aware decision making with adaptive strategies (IDAS) approach
 作为输入: <br>
 (1)Road priority <br>
 (2)Driver type <br>
-
+# Actor-Critic
+引入actor-critic思想 <br>
 

@@ -1,0 +1,13 @@
+# Human-Like Decision Making for Autonomous Driving: A Noncooperative Game Theoretic Approach
+keywords: game theory, driver model, model predictive control <br>
+变道场景是值得被研究的场景之一，同时交互场景同样值得被研究,去解决变道场景中无人车交互的问题，博弈理论是一个有效的手段<br>
+
+# 整体概览
+首先，无人车被赋予了不同的驾驶风格，为的是在决策过程中去模拟人类的驾驶行为. <br>
+然后，无人车的决策制定被看做为非合作式的博弈,其中，纳什均衡以及斯坦克尔伯格博弈被用来解决决策问题.<br>
+除此之外，势场法(potential field method)以及MPC被分别用来进行动作预测和规划. <br>
+最后，通过不同的测试场景验证了无人车类人决策框架. <br>
+整合了驾驶员模型以及车路模型的整合模型被构建. <br>
+基于非合作博弈论的决策生成模块被制作. <br>
+动作预测与规划模块根据势场法以及MPC被设计. <br>
+

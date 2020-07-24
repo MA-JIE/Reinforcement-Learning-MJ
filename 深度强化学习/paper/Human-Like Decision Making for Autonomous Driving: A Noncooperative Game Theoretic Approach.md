@@ -31,4 +31,19 @@ Y and Y_p are the lateral coordinate position of the vehicle and preview point <
 a_x:自行车模型输入 <br>
 Y_p:驾驶员模型输入 <br>
 输出：车辆状态和位置 ,被用于决策以及motion planning <br>
-# 
+
+# 基于非合作博弈论的决策生成
+前提:障碍物车辆只进行加速，加速，无变道动作.<br>
+#### Modeling for Lane-change Decision Making
+![lane_change](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/paper/img/lane_change.png) <br>
+对于上述场景，无人车前方车辆低速行驶，无人车将会决定左变道还是右变道，或者跟随前方车辆直线行驶.<br>
+驾驶安全性，舒适性，通行效率将会被考虑,加上权重系数整合为cost function <br>
+drive safety cost:由纵向安全cost以及横向安全cost组成.<br>
+ride comfort: 直接与横纵向加速度相关. <br>
+the travel efficiency: 与无人车的纵向速度有关. <br>
+以上为无人车自身的cost函数计算方式，对于障碍物车辆的cost function计算方式类似，不同的是障碍物车辆不需要考虑左右变道,比如:障碍物车辆的ride comfort cost只和纵向加速度相关.<br> 
+之前提到的三种驾驶风格: aggressive, normal and conservative用来描述无人车的驾驶行为，不同驾驶风格之间的差异体现在上述cost function加权系数的不同设置上,分别对应travel efficiency，ride comfort，drive safety,不同风格对应的权重系数设置如下:<br>
+![lane_change](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/paper/img/driving_style.png) <br>
+
+
+

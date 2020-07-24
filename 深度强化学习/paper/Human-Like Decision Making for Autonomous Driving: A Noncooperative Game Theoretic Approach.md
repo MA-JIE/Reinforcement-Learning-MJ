@@ -22,3 +22,13 @@ v_x: the longitudinal velocity of the vehicle <br>
 Y and Y_p are the lateral coordinate position of the vehicle and preview point <br>
 最终，M，P的距离与前轮转向角的关系可描述为: <br>
 ![driver_model](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/paper/img/driver_model1.png) <br>
+# Vehicle-Road Model
+引入自行车模型，描述了全局坐标系下的自行车模型.<br>
+
+# Integrated Model for Human-like Driving
+将driver-model与Vehicle-model进行整合，用于动作预测: <br>
+![integrated_model](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/paper/img/integrated_model.png) <br>
+a_x:自行车模型输入 <br>
+Y_p:驾驶员模型输入 <br>
+输出：车辆状态和位置 ,被用于决策以及motion planning <br>
+# 

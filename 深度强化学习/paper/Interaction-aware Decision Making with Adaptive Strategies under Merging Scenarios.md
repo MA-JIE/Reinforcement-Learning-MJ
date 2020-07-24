@@ -23,7 +23,11 @@ actor中的参数根据critic的评估来进行更新. <br>
 * 在并道场景中严格遵循交通规则 <br>
 decentralized critic: The decentralized critic aimed to provide a policy gradient for agent to learn how to drive under merging scenarios by strictly following the rules while having different behaviors. <br>
 智能体只专注与自身, 不与其他智能体进行交互,策略梯度公式如下: <br>
-![decentralized critic]() <br>
+![decentralized critic](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/paper/img/drl1.png) <br>
 * 在维持一个比较好的交通流的前提下，并道时与其他智能体更好地进行交互 <br>
-
+centralized critic: The centralized critic encourages each agent to interact with each other in order to have a joint success and maintain a smooth traffic. <br>
+如果我们从宏观角度，比如交通流量上考虑，我们需要考虑与其他智能体交互的场景: <br>
+![centralized critic](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/paper/img/drl2.png) <br>
 (2)将两种目标函数整合 <br>
+整体策略梯度如下: <br>
+![object function](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/paper/img/drl3.png) <br>

@@ -39,3 +39,6 @@ centralized critic: The centralized critic encourages each agent to interact wit
 ![curriculum](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/paper/img/drl4.png) <br>
 #### Masking Mechanism
 文中提到: 我们希望我们的策略能够直接学习如何在战术层面上做出决策，而不是去探索那些肯定会导致事故或打破规则的动作. <br>
+三种掩码将会被考虑: 车辆动力学(保证无人车的加速度以及抖动在合理范围内)，交通规则(防止智能体超速)，安全因素(使智能体与前车保持安全距离) <br>
+这样做的直接效果是，在选择最佳动作之前，我们应用掩码机制为了只选择可行动作的子集. <br>
+最终的掩码为三个掩码的并集. <br>

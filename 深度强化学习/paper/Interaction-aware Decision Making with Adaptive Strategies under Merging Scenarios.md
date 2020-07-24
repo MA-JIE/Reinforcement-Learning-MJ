@@ -21,7 +21,9 @@ actor中的参数根据critic的评估来进行更新. <br>
 #### Interaction-aware Decision Making(交互意识决策)
 (1)定义了两种目标函数,类型如下: <br>
 * 在并道场景中严格遵循交通规则 <br>
-
+decentralized critic: The decentralized critic aimed to provide a policy gradient for agent to learn how to drive under merging scenarios by strictly following the rules while having different behaviors. <br>
+智能体只专注与自身, 不与其他智能体进行交互,策略梯度公式如下: <br>
+![decentralized critic]() <br>
 * 在维持一个比较好的交通流的前提下，并道时与其他智能体更好地进行交互 <br>
 
 (2)将两种目标函数整合 <br>

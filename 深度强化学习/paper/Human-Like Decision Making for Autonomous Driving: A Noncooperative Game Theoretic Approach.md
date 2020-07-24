@@ -16,3 +16,4 @@ keywords: game theory, driver model, model predictive control <br>
 # Driver Model
 单点预瞄驾驶员模型(single-point preview driver model)被引用,本文中，该模型被用于动作预测. <br>
 ![driver_model](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/paper/img/driver_model.png) <br>
+上述模型旨在通过控制无人车前轮的steering angle来最小化M点与P点的差距. <br>

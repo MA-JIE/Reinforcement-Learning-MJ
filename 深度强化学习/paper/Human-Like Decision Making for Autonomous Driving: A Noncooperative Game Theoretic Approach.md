@@ -44,6 +44,10 @@ the travel efficiency: 与无人车的纵向速度有关. <br>
 以上为无人车自身的cost函数计算方式，对于障碍物车辆的cost function计算方式类似，不同的是障碍物车辆不需要考虑左右变道,比如:障碍物车辆的ride comfort cost只和纵向加速度相关.<br> 
 之前提到的三种驾驶风格: aggressive, normal and conservative用来描述无人车的驾驶行为，不同驾驶风格之间的差异体现在上述cost function加权系数的不同设置上,分别对应travel efficiency，ride comfort，drive safety,不同风格对应的权重系数设置如下:<br>
 ![lane_change](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/paper/img/driving_style.png) <br>
-
+#### Noncooperative Decision Making Based on Nash Equilibrium
+无人车与主车被认为是相互独立的 <br>
+#### Noncooperative Decision Making Based on Stackelberg Equilibrium
+相邻障碍物车辆与主车的行为决策将会相互影响. <br>
+# MOTION PREDICTION AND PLANNING BASED ON THE POTENTIAL FIELD MODEL METHOD AND MPC
 
 

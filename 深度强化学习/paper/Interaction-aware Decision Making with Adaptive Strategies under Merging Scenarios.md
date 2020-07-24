@@ -37,3 +37,5 @@ centralized critic: The centralized critic encourages each agent to interact wit
 #### Curriculum Learning
 文中提到:尤其在多智能体场景下，让智能体同时去学习自适应性和交互性的驾驶行为的方式是困难和低效的,因此，基于课程式学习的策略，文中引入了双阶段的训练过程. <br>
 ![curriculum](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/paper/img/drl4.png) <br>
+#### Masking Mechanism
+文中提到: 我们希望我们的策略能够直接学习如何在战术层面上做出决策，而不是去探索那些肯定会导致事故或打破规则的动作. <br>

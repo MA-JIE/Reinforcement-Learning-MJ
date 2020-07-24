@@ -31,3 +31,9 @@ centralized critic: The centralized critic encourages each agent to interact wit
 (2)将两种目标函数整合 <br>
 整体策略梯度如下: <br>
 ![object function](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/paper/img/drl3.png) <br>
+#### Different Driving Behaviors
+亮点:回报函数的定义方式，除了状态-动作对参数外，还包含了路权优先级b_prio以及驾驶风格b_type. <br>
+每个智能体的回报函数由两个与驾驶行为相关的子回报函数组成：r_finish以及r_collide. <br>
+#### Curriculum Learning
+文中提到:尤其在多智能体场景下，让智能体同时去学习自适应性和交互性的驾驶行为的方式是困难和低效的,因此，基于课程式学习的策略，文中引入了双阶段的训练过程. <br>
+![curriculum](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/paper/img/drl4.png) <br>

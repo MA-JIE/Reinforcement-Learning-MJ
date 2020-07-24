@@ -11,5 +11,8 @@ keywords: game theory, driver model, model predictive control <br>
 基于非合作博弈论的决策生成模块被制作. <br>
 动作预测与规划模块根据势场法以及MPC被设计. <br>
 # 无人车的类人决策架构图
-![human-like framework]() <br>
-
+![human-like framework](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/paper/img/human-like.png) <br>
+下面对架构进行详细解析 <br>
+# Driver Model
+单点预瞄驾驶员模型(single-point preview driver model)被引用,本文中，该模型被用于动作预测. <br>
+![driver_model](https://github.com/MA-JIE/Reinforcement-Learning-MJ/blob/master/%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/paper/img/driver_model.png) <br>

@@ -49,5 +49,13 @@ the travel efficiency: 与无人车的纵向速度有关. <br>
 #### Noncooperative Decision Making Based on Stackelberg Equilibrium
 相邻障碍物车辆与主车的行为决策将会相互影响. <br>
 # MOTION PREDICTION AND PLANNING BASED ON THE POTENTIAL FIELD MODEL METHOD AND MPC
+将势场法与MPC结合,去预测决策框架中的动作状态以及无碰撞的路径. <br>
+#### 基于势场法的碰撞检测
+构建关于障碍物车辆以及道路的势场函数,函数由这两部分组成. <br>
+#### 基于MPC的动作预测
+首先构建一个线性时变的系统,然后将其离散化(控制量u以及状态量x). <br>
+输出向量中包含与主车预测位置相关的势场值,主车预测位置与车道中心线的横向距离误差,yaw值误差.<br>
+随后定义了主车动作预测的cost function <br>
+最后无人车的动作预测以及规划问题可以看成组合优化的问题,优化变量为控制量<br>
 
 
